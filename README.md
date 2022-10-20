@@ -46,6 +46,33 @@ f. AWS Amplify will now build your source code and deploy your app at https://..
 
 g. Once the build completes, select the thumbnail to see your web app up and running live. 
 
+**Automatically deploy code changes**
+In this step, you will make some changes to the code using your text editor and push the changes to the main branch of your app.
+
+a. Edit src/App.js with the code below and save.
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>Hello from V2</h1>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+b. Push the changes to GitHub in the command prompt (Windows) or terminal (macOS) to automatically kick off a new build: 
+
+git add .
+git commit -m “changes for v2”
+git push origin main
+c. Once the build is complete, select the thumbnail in the AWS Amplify console to view your updated app.
+
 **Conclusion**
 You have deployed a React application in the AWS Cloud by integrating with GitHub and using AWS Amplify. With AWS Amplify, you can continuously deploy your application in the cloud and host it on a globally available CDN.
 
